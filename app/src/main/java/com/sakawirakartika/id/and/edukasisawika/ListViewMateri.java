@@ -1,17 +1,21 @@
 package com.sakawirakartika.id.and.edukasisawika;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.view.View.OnClickListener;
 
 /**
  * Created by cvglobalsolusindo on 4/9/2016.
  */
 
 
-public class ListViewMateri extends Activity {
+public class ListViewMateri extends Activity  {
     ListView list_materi;
     String[] materi;
 
@@ -29,6 +33,18 @@ public class ListViewMateri extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_view_row, R.id.listText, materi);
         //place each view-item inside listview by setting adapter for our listview
         list_materi.setAdapter(adapter);
+        list_materi.setOnClickListener((OnClickListener) this);
 
     }
+
+
+    public  void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+        if (materi [arg2] == "1. Arti Lambang") {
+            startActivity(new Intent(this, IsiMateriActivity.class));
+        } else if (materi [arg2] == "2. Krida Survival") {
+            startActivity(new Intent (this, IsiMateriActivity.class));
+        }
+    }
+
+
 }
