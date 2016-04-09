@@ -15,7 +15,6 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageView2"
-        android:layout_gravity="center_horizontal"
         android:background="@drawable/swk"
         android:paddingTop="20dp"
         android:scaleType="fitXY"
