@@ -40,9 +40,17 @@ public class ListViewMateri extends Activity  {
 
     public  void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         if (materi [arg2] == "1. Arti Lambang") {
-            startActivity(new Intent(this, IsiMateriActivity.class));
+            startActivity(new Intent(this, MateriLambangswk.class));
         } else if (materi [arg2] == "2. Krida Survival") {
-            startActivity(new Intent (this, IsiMateriActivity.class));
+            startActivity(new Intent (this, MateriKridaSurvival.class));
+        } else if (materi [arg2] == "3. Krida Pioneering") {
+            startActivity(new Intent(this, MateriKridaPioneering.class));
+        } else if (materi [arg2] == "4. Krida Mountainering") {
+            startActivity(new Intent(this, MateriKridaPioneering.class));
+        } else if (materi [arg2] == "5. Krida Navigasi Darat") {
+            startActivity(new Intent(this, MateriNavdar.class));
+        } else if (materi [arg2] == "6. Krida Penanggulangan bencana alam") {
+            startActivity(new Intent(this, MateriPenangBencanaAlam.class));
         }
     }
 
